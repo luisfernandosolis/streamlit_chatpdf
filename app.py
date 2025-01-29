@@ -135,7 +135,7 @@ with input_container:
         retriever_db = vector_db.as_retriever()
 
         retrieve_qa = RetrievalQA.from_chain_type(
-            llm=llm,
+            llm=llm_groq,
             retriever =retriever_db,
             chain_type="stuff" # https://js.langchain.com/v0.1/docs/modules/chains/document/stuff/
         )
