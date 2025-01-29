@@ -141,6 +141,7 @@ with input_container:
 
 
 with chat_container:
+    st.header("chat with your pdf!")
 
     question_messages = st.session_state["questions"]
     answers_messages = st.session_state["answers"]
