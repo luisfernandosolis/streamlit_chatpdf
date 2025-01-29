@@ -129,6 +129,7 @@ with input_container:
         llm_groq = ChatGroq(
             model_name="deepseek-r1-distill-llama-70b",
             temperature=0.7,
+            max_tokens=50,
             api_key="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"
         )
 
