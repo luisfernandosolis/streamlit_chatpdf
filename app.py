@@ -19,6 +19,11 @@ from langchain_openai import ChatOpenAI
 from langchain.chains import RetrievalQA
 from streamlit_pdf_viewer import pdf_viewer
 
+## groq
+
+from langchain_groq import ChatGroq
+
+
 ## create session state variables
 if "questions" not in st.session_state:
     st.session_state["questions"] = []
@@ -121,7 +126,11 @@ with input_container:
             template=prompt
         )
 
-        llm = ChatOpenAI(model="gpt-4")
+        llm_groq = ChatGroq(
+            model_name="deepseek-r1-distill-llama-70b",
+            temperature=0.7,
+            api_key="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"
+        )
 
         retriever_db = vector_db.as_retriever()
 
